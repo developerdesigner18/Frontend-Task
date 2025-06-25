@@ -267,7 +267,7 @@ export default function AddTodoForm({ defaultValues, onSubmit }: AddTodoFormProp
                                         loadingText={isEditMode ? 'Updating...' : 'Creating...'}
                                         variant="primary"
                                         size="lg"
-                                        className="flex-1"
+                                        className="flex-1 cursor-pointer"
                                     >
                                         {isEditMode ? 'Update Todo' : 'Create Todo'}
                                     </Button>
@@ -276,6 +276,7 @@ export default function AddTodoForm({ defaultValues, onSubmit }: AddTodoFormProp
                                         onClick={() => router.push('/')}
                                         variant="secondary"
                                         size="lg"
+                                        className='cursor-pointer'
                                         disabled={loading}
                                     >
                                         Cancel

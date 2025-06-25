@@ -174,9 +174,6 @@ export default function SignupForm() {
                                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                                 </button>
                             </div>
-                            <p className="mt-1 text-xs text-gray-500">
-                                Password must be at least 8 characters long
-                            </p>
                         </div>
 
                         {/* Error message */}
@@ -190,7 +187,7 @@ export default function SignupForm() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group"
+                            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium py-3 px-6 rounded-xl shadow-lg hover:shadow-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group"
                         >
                             <span className="flex items-center justify-center">
                                 {loading ? (
@@ -207,17 +204,7 @@ export default function SignupForm() {
                             </span>
                         </button>
 
-                        {/* Password strength indicator */}
-                        <div className="space-y-2">
-                            <div className="flex items-center space-x-2 text-xs text-gray-500">
-                                <div className="flex space-x-1">
-                                    <div className={`w-2 h-2 rounded-full ${formData.password.length >= 8 ? 'bg-green-500' : 'bg-gray-300'} transition-colors duration-200`}></div>
-                                    <div className={`w-2 h-2 rounded-full ${formData.password.length >= 12 ? 'bg-green-500' : 'bg-gray-300'} transition-colors duration-200`}></div>
-                                    <div className={`w-2 h-2 rounded-full ${/[A-Z]/.test(formData.password) && /[a-z]/.test(formData.password) && /[0-9]/.test(formData.password) ? 'bg-green-500' : 'bg-gray-300'} transition-colors duration-200`}></div>
-                                </div>
-                                <span>Password strength</span>
-                            </div>
-                        </div>
+                       
                     </form>
 
                     {/* Divider */}

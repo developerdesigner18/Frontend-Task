@@ -70,7 +70,7 @@ export default function TodoList({ paginatedTodos }: TodoListProps) {
                                 href={`/edit/${todo.id}`}
                                 className=""
                             >
-                                <Button className='!px-3 !py-1 '>
+                                <Button className='!px-3 !py-1 cursor-pointer '>
 Edit
                                 </Button>
                                 
@@ -79,7 +79,7 @@ Edit
                                 onClick={() => handleDelete(todo.id)}
                                 disabled={isPending || deletingId === todo.id}
                                 variant='danger'
-                                className=" text-white !px-3 !py-1 "
+                                className=" text-white !px-3 !py-1 cursor-pointer "
                             >
                                 {deletingId === todo.id ? 'Deleting...' : 'Delete'}
                             </Button>
@@ -96,7 +96,7 @@ Edit
                             <Button
                                 onClick={() => handleViewPdf(todo.file_path)}
                                 variant='success'
-                                className="!px-3 !py-1 !text-sm"
+                                className="!px-3 !py-1 !text-sm cursor-pointer"
                             >
                                 View PDF
                             </Button>
