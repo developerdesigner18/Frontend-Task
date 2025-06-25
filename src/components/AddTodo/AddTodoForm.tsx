@@ -186,23 +186,25 @@ export default function AddTodoForm({ defaultValues, onSubmit }: AddTodoFormProp
                                                 </div>
                                             </div>
                                             <div className="flex space-x-3">
-                                                <button
+                                                <Button
+                                                    variant="primary"
                                                     type="button"
                                                     onClick={() => window.open(fileUrl, '_blank')}
-                                                    className="px-3 py-1.5 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                                                    className="!px-3 !py-1.5 text-sm"
                                                 >
                                                     View PDF
-                                                </button>
-                                                <button
+                                                </Button>
+                                                <Button
+                                                variant='danger'
                                                     type="button"
                                                     onClick={() => {
                                                         setSelectedFile(null);
                                                         setFileUrl("");
                                                     }}
-                                                    className="px-3 py-1.5 text-sm bg-red-100 text-red-600 rounded-lg hover:bg-red-200 transition-colors duration-200"
+                                                    className="!px-3 !py-1.5 text-sm"
                                                 >
                                                     Remove
-                                                </button>
+                                                </Button>
                                             </div>
                                         </div>
                                     ) : !selectedFile ? (

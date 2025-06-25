@@ -30,7 +30,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <AuthProvider>
+        <div className="sticky top-0 z-50">
         <Header/>
+        </div>
           {children}
         </AuthProvider>
       </body>

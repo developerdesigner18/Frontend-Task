@@ -26,11 +26,9 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500 to-blue-700 rounded-full opacity-10 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-300 to-purple-500 rounded-full opacity-5 animate-pulse delay-500"></div>
-      </div>
+        <div className="fixed -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full opacity-10 animate-pulse pointer-events-none"></div>
+        <div className="fixed -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500 to-blue-700 rounded-full opacity-10 animate-pulse delay-1000 pointer-events-none"></div>
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-300 to-purple-500 rounded-full opacity-5 pointer-events-none animate-pulse delay-500"></div>
 
       <div className="relative">
         {/* Main Content */}
